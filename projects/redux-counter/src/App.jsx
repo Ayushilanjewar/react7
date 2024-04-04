@@ -1,10 +1,10 @@
-import React from 'react'
-import './App.css'
-import { Provider } from 'react-redux'
-import store from './store'
-import Counter from './Counter'
+import React from "react"
+import "./App.css"
+import { Provider } from "react-redux"
+import store from "./Redux/store"
+import Counter from "./Counter"
 const App = () => {
-  return (
+	return (
 		<div>
 			<Provider store={store}>
 				<h1>Redux Counter</h1>
