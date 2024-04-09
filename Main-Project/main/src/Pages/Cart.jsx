@@ -1,11 +1,20 @@
-import React from 'react'
+// Cart.js
+import React from "react"
+import { useSelector } from "react-redux"
 
-const Cart = () => {
-  return (
-    <div>
-      cart works
-    </div>
-  )
+function Cart() {
+	const cart = useSelector((state) => state.products.cart)
+
+	return (
+		<div>
+			<h1>Cart</h1>
+			<ul>
+				{cart.map((item) => (
+					<li key={item.id}>{item.title}</li>
+				))}
+			</ul>
+		</div>
+	)
 }
 
 export default Cart

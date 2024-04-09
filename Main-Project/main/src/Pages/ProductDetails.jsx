@@ -1,11 +1,16 @@
-import React from 'react'
+// ProductDetail.js
+import React from "react"
+import { useParams } from "react-router-dom"
 
-const ProductDetails = () => {
-  return (
-    <div>
-      Product works
-    </div>
-  )
+function ProductDetail() {
+	const { id } = useParams()
+
+	return (
+		<div>
+			<h1>Product Detail</h1>
+			<p>Product ID: {productId}</p>
+		</div>
+	)
 }
 
-export default ProductDetails
+export default ProductDetail
